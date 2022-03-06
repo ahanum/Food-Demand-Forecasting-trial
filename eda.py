@@ -39,7 +39,7 @@ st.subheader('Weekly Demand Data')
 st.write(weekly_data)
 
 st.bar_chart(weekly_data['num_orders'])
-df = pd.DataFrame(weekly_data[:], columns = ['num_orders','checkout_price','base_price'])
+df = pd.DataFrame(weekly_data[:200], columns = ['num_orders','checkout_price','base_price'])
 df.hist()
 
 st.pyplot()
@@ -48,7 +48,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.line_chart(df)
 
-chart_data = pd.DataFrame(weekly_data[:], columns=['num_orders', 'base_price'])
+chart_data = pd.DataFrame(weekly_data[:200], columns=['num_orders', 'base_price'])
 st.area_chart(chart_data)
 
 #Center Information
