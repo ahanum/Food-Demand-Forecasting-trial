@@ -36,6 +36,7 @@ st.bar_chart(weekly_data['num_orders'])
 df = pd.DataFrame(weekly_data[:200], columns = ['num_orders','checkout_price','base_price'])
 df.hist()
 st.pyplot()
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.line_chart(df)
 
