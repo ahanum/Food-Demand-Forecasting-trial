@@ -29,9 +29,9 @@ def load_meal_data(nrows):
     return data
 
 
-weekly_data = load_data(1000)
-center_info_data = load_center_data(1000)
-meal_data = load_meal_data(1000)
+weekly_data = load_data()
+center_info_data = load_center_data()
+meal_data = load_meal_data()
 
 
 #WeeklyDemand Data
@@ -39,7 +39,7 @@ st.subheader('Weekly Demand Data')
 st.write(weekly_data)
 
 st.bar_chart(weekly_data['num_orders'])
-df = pd.DataFrame(weekly_data[:500], columns = ['num_orders','checkout_price','base_price'])
+df = pd.DataFrame(weekly_data[:], columns = ['num_orders','checkout_price','base_price'])
 df.hist()
 
 fig, ax = plt.subplots()
@@ -51,7 +51,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.line_chart(df)
 
-chart_data = pd.DataFrame(weekly_data[:50], columns=['num_orders', 'base_price'])
+chart_data = pd.DataFrame(weekly_data[:], columns=['num_orders', 'base_price'])
 st.area_chart(chart_data)
 
 #Center Information
