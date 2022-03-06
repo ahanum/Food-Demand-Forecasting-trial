@@ -42,9 +42,6 @@ st.bar_chart(weekly_data['num_orders'])
 df = pd.DataFrame(weekly_data[:], columns = ['num_orders','checkout_price','base_price'])
 df.hist()
 
-fig, ax = plt.subplots()
-ax.scatter([1, 2, 3], [1, 2, 3])
-
 st.pyplot(fig)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
