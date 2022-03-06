@@ -29,9 +29,9 @@ def load_meal_data(nrows):
     return data
 
 
-weekly_data = load_data()
-center_info_data = load_center_data()
-meal_data = load_meal_data()
+weekly_data = load_data(1000)
+center_info_data = load_center_data(1000)
+meal_data = load_meal_data(1000)
 
 
 #WeeklyDemand Data
