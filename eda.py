@@ -6,6 +6,12 @@ import matplotlib.pyplot as plt
 
 
 st.title('Food Demand Forecasting')
+st.write("""
+# Simple Food Demand Forecasting App
+This app predicts the **Food Demand**!
+""")
+
+
 
 @st.cache
 def load_data(nrows):
